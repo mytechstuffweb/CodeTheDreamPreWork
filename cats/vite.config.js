@@ -11,5 +11,5 @@ export default defineConfig({
         },
         }),
     ],
-    base: "/mytechstuffweb/CodeTheDreamPreWork"
+    base: "/mytechstuffweb/CodeTheDreamPreWork/cats/"
 })
