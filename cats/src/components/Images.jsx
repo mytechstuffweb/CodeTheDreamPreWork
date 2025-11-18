@@ -14,11 +14,6 @@ export default function Images({ loadStatus, selectedBreed, images }) {
             { (loadStatus.breeds === 1 && loadStatus.data === 1) &&
                 images.map((image) => (
                     <li key={ image.id } className="container-item">
-                        {/* <img 
-                            src={ image.url } 
-                            atl="Random cat picture"                                   
-                        />
-                        <p className="p-msg">{ image.name }</p> */}
                         <Image selectedBreed={ selectedBreed } image={ image } />
                     </li>
                 ))

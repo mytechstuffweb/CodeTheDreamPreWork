@@ -43,7 +43,7 @@ export default function CatsApp() {
                     description: breed.description,
                     wikipedia_url: breed.wikipedia_url,
                     vetstreet_url: breed.vetstreet_url,
-                    cfa_url: cfa_url, // breed.cfa_url,
+                    cfa_url: cfa_url, 
                     temperament: breed.temperament
                 })
             })
@@ -163,39 +163,39 @@ export default function CatsApp() {
 
     return (
         <div id="app">
-        <header className="header">
-            <h1 className="h1">
-                Welcome to the world of CATS !!!
-            </h1>
+            <header className="header">
+                <h1 className="h1">
+                    Welcome to the world of CATS !!!
+                </h1>
 
-            <div className="div-flex">
-                <Breeds breeds={ breeds } onChange={ handleBreedSelect } />
+                <div className="div-flex">
+                    <Breeds breeds={ breeds } onChange={ handleBreedSelect } />
 
-                <Pages id={ pageSize } onChange={ handlePageSize } />
+                    <Pages id={ pageSize } onChange={ handlePageSize } />
 
-                <Colors id={ colorScheme } selected={ colorScheme } onChange={ handleColorSchemeShange } />                
-            </div>
+                    <Colors id={ colorScheme } selected={ colorScheme } onChange={ handleColorSchemeShange } />                
+                </div>
 
-            { selectedBreed &&
-                <Details selectedBreed={ selectedBreed } colorScheme={ colorScheme } />
-            }
+                { selectedBreed &&
+                    <Details selectedBreed={ selectedBreed } colorScheme={ colorScheme } />
+                }
 
-            <Button 
-                onClick={ () => selectData("images/search", selectedBreed?.id, pageSize) }
-                caption="Select Images"
-            />            
-        </header>
-
-        <main className="main">
-            <Images selectedBreed={ selectedBreed? true : false } loadStatus={ loadStatus } images={ images } />
-
-            { (pageSize > 3) &&
                 <Button 
                     onClick={ () => selectData("images/search", selectedBreed?.id, pageSize) }
                     caption="Select Images"
-                />
-            }       
-        </main>
+                />            
+            </header>
+
+            <main className="main">
+                <Images selectedBreed={ selectedBreed? true : false } loadStatus={ loadStatus } images={ images } />
+
+                { (pageSize > 3) &&
+                    <Button 
+                        onClick={ () => selectData("images/search", selectedBreed?.id, pageSize) }
+                        caption="Select Images"
+                    />
+                }       
+            </main>
         </div>
     )
 }

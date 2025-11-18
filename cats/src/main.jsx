@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client'
 
 import './index.css'
 
-import CatsApp from "./CatsApp.jsx";
+import CatsApp from './CatsApp';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+//   <StrictMode>
     <CatsApp/>
-  </StrictMode>
+//   </StrictMode>
 )

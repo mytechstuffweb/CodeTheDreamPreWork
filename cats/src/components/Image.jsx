@@ -3,7 +3,6 @@ export default function Image({ selectedBreed, image }) {
     console.log(breedName);
 
     return (
-        // <figure>
         <>
             <img 
                 src={ image.url } 
@@ -13,6 +12,5 @@ export default function Image({ selectedBreed, image }) {
                 <figcaption>&nbsp;{ breedName }</figcaption>
             }
         </>
-        // </figure>
     )
 }
